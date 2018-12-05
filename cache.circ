@@ -419,6 +419,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(650,290)" to="(660,290)"/>
     <comp lib="4" loc="(410,100)" name="Register">
       <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
       <a name="label" val="valid"/>
     </comp>
     <comp lib="0" loc="(150,260)" name="Pin">
@@ -449,10 +450,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(410,210)" name="Register">
       <a name="width" val="4"/>
+      <a name="trigger" val="falling"/>
       <a name="label" val="cache_tag"/>
     </comp>
     <comp lib="4" loc="(410,330)" name="Register">
       <a name="width" val="32"/>
+      <a name="trigger" val="falling"/>
       <a name="label" val="data"/>
     </comp>
     <comp lib="1" loc="(610,290)" name="AND Gate">
