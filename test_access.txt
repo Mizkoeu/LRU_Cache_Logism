@@ -1,0 +1,32 @@
+#1. A cache miss, whether due to an empty cache or mismatched tag, results in a ROM access.
+
+Test 1 - Compulsory Cache Misses
+	0000 0000   # access any memory not accessed before is fine.
+	0001 0110   # miss!
+
+Test 2 - Mismatched Tag Misses
+	0001 0000   # tag mismatched
+	0000 0110   # tag mismatched
+
+#2. Cached data is returned without accessing ROM when there is a cache hit.
+
+	0001 0000   
+	0000 0110
+
+#3. Bytes within the same cache line are cached together.
+	
+	0001 0010
+	0001 0001
+	0001 0011
+
+	0000 0111
+	0000 0100
+	0000 0101
+
+#4. Accesses to addresses that map to one cache index do not overwrite or invalidate data cached in entries for the other indices.
+
+	0010 0010   # change 00 cache entry line
+	0001 1010   # change 10 cache entry line
+	0000 0111   # the 01 cache entry line is still the same.
+
+

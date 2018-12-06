@@ -102,9 +102,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(590,320)" to="(590,380)"/>
     <wire from="(410,300)" to="(410,380)"/>
     <wire from="(390,300)" to="(390,390)"/>
-    <comp lib="6" loc="(330,373)" name="Text">
-      <a name="text" val="Reading ROM"/>
-    </comp>
     <comp lib="4" loc="(570,380)" name="ROM">
       <a name="addrWidth" val="6"/>
       <a name="dataWidth" val="32"/>
@@ -112,7 +109,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
 abcdef01 ca7f00d5 cafed00f f00dd00d b453b411 f007b411 5c00ba 12345678
 </a>
     </comp>
-    <comp lib="0" loc="(310,270)" name="Clock"/>
+    <comp lib="0" loc="(310,240)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Address"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="5" loc="(340,390)" name="LED">
+      <a name="facing" val="east"/>
+    </comp>
     <comp lib="0" loc="(510,240)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -121,15 +126,10 @@ abcdef01 ca7f00d5 cafed00f f00dd00d b453b411 f007b411 5c00ba 12345678
       <a name="label" val="Data"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(310,240)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Address"/>
-      <a name="labelloc" val="north"/>
+    <comp lib="6" loc="(330,373)" name="Text">
+      <a name="text" val="Reading ROM"/>
     </comp>
     <comp lib="7" loc="(450,240)" name="main"/>
-    <comp lib="5" loc="(340,390)" name="LED">
-      <a name="facing" val="east"/>
-    </comp>
+    <comp lib="0" loc="(310,270)" name="Clock"/>
   </circuit>
 </project>
